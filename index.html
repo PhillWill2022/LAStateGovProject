@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="mainpagestyle.css">
+  <script src="script.js"></script>
+  <title>Welcome to Louisiana</title>
+</head>
+<body>
+  <header>
+  <a href="index.html" class="logo-link">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Seal_of_Louisiana.svg/400px-Seal_of_Louisiana.svg.png" alt="Your Logo" class="logo">
+  </a>   
+    <h1>Welcome to Louisiana, the Pelican State.</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="government.html">Government</a></li>
+      <li><a href="baton_rouge.html">Baton Rouge</a></li>
+      <li><a href="new_orleans.html">New Orleans</a></li>
+      <li><a href="shreveport.html">Shreveport</a></li>
+      <li><a href="sources.html">Sources</a></li>
+    </ul>
+  </nav>
+  
+  <section class="main-content">
+    <div class="container">
+      <div class="image-container">
+        <img src="https://lsusports.net/imgproxy/CbcXgUHdYDxr9tmzeAGvkkwzoNM0yo8zIPuKorGR5fw/fit/3840/2160/ce/0/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2xzdXNwb3J0cy1jb20vMjAyMS8xMC8yNzE1YWJiMS1zdGFkaXVtXzMxOTYuanBn.png" alt="Tiger Stadium" width="500px">
+        <p class="image-comment">See a Louisiana State University Tigers football game while in Baton Rouge!</p>
+      </div>
+      <div class="image-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mardi_Gras_Parade%2C_New_Orleans%2C_Louisiana_%28LOC%29.jpg/440px-Mardi_Gras_Parade%2C_New_Orleans%2C_Louisiana_%28LOC%29.jpg" alt="Mardi Gras" width="500px">
+        <p class="image-comment">Let the good times roll when celebrating Mardi Gras in New Orleans!</p>
+      </div>
+      <div class="image-container">
+        <img src="https://www.worldatlas.com/r/w1300-q80/upload/8d/c1/5b/shutterstock-710316274.jpg" alt="Shreveport Cityscape" alt="Casinos" width="500px">
+        <p class="image-comment">Test your luck at one of the many northern Louisiana casinos on the river in Shreveport!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <div class="container">
+      <div class="image-container">
+        <img src="https://actearlymap.doe.louisiana.gov/Content/img/LA_Map_2020.svg.png" alt="Louisiana Parishes" width="600px">
+      </div>
+      <div class="form-container">
+        <h2>Contact Us</h2>
+        <form action="submit.php" method="POST" onsubmit="return validateForm()">
+          <label for="firstname"><strong>First Name:</strong> </label>
+          <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+          
+          <label for="lastname"><strong>Last Name:</strong> </label>
+          <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+          
+          <label for="email"><strong>Email Address:</strong> </label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          
+          <label for="confirmEmail"><strong>Confirm Email Address:</strong> </label>
+          <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Re-enter your email address" required>
+          
+          <label for="question"><strong>Question:</strong> </label>
+          <textarea id="question" name="question" placeholder="Enter your question" required></textarea>
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function validateForm() {
+      var email = document.getElementById("email").value;
+      var confirmEmail = document.getElementById("confirmEmail").value;
+
+      if (email !== confirmEmail) {
+        alert("Email addresses do not match. Please make sure they are the same.");
+        return false;
+      }
+      else
+      return true;
+    }
+  </script>
+  
+  <footer>
+    <p>&copy; 2023 State of Louisiana Government and Tourist Info. All rights reserved.</p>
+  </footer>  
+</body>
+</html>
